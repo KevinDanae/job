@@ -10,6 +10,10 @@
    <!--favicon-img-->
    <!--main css file should not be removed -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="css/gallery-grid.css">
     <!--main css file-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 </head>
@@ -43,6 +47,7 @@
             <div class="navigation-links">
                 <a href="#" data-text="HOME" id="home-link" >Inicio</a>
                 <a href="#" data-text="ABOUT" id="about-link" >Sobre mi</a>
+                <a href="#" data-text="PORTFOLIO" id="portfolio-link" >Galeria</a>
                 <a href="#" data-text="CONTACT" id="contact-link" >Contacto</a>
             </div>
         </div>
@@ -228,7 +233,7 @@
     <!--copyright-section You Can Remove After Downloading-->
             <div class="footer">
              <div class="footer-text">
-                 <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> Job JBC
+                 <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> Job Jbc.
              </div>
             </div>
     <!--copyright-section-->
@@ -275,14 +280,14 @@
                  <div class="form-header">
                      Mensaje para mi
                  </div>
-                 <form id="myForm" action="#">
+                 <form id="myForm" action="php/enviar.php" method="post">
                     <div class="input-line">
-                        <input  id="name" type="text" placeholder="Nombre" class="input-name">
-                        <input id="email" type="email" placeholder="Email"  class="input-name">
+                        <input name="nombre" type="text" placeholder="Nombre" class="input-name" required>
+                        <input name="correo" type="email" placeholder="Email"  class="input-name" required>
                     </div>
-                    <input type="text" id="subject" placeholder="Asunto" class="input-subject">
-                    <textarea id ="body" class="input-textarea" placeholder="Mensaje"></textarea>
-                    <button type="button" id ="submit" value="send">Enviar</button>
+                    <input name="asunto" id="subject" placeholder="Asunto" class="input-subject" required>
+                    <textarea name="mensaje" id ="body" class="input-textarea" placeholder="Mensaje" required></textarea>
+                    <button type="submit" id ="submit" value="send">Enviar</button>
                  </form>
                
              </div>
@@ -297,7 +302,7 @@
                     <img src="./images/icon-name.png" class="icon" alt="name-icon">
                     <div class="contact-info-icon-text">
                         <h6>Nombre</h6>
-                        <p>Job JBC</p>
+                        <p>Job Jbc</p>
                   </div>
                 </div>
                 <div class="contect-info-content-line">
@@ -322,19 +327,125 @@
                     <!--copyright-section You Can Remove After Downloading-->
                     <div class="footer">
                         <div class="footer-text">
-                            <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px">Job JBC
+                            <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px">Job Jbc
                         </div>
                        </div>
                <!--copyright-section-->
      </div>
         <!--contact end-->
     </div>
+
+    <!-- Galeria -->
+    <div id="portfolio">
+        <div class="color-changer">
+            <div class="color-panel">
+                <img src="images/gear.png" alt="">
+            </div>
+            <div class="color-selector">
+                <div class="heading">Custom Colors</div>
+                <div class="colors">
+                    <ul >
+                        <li>
+                            <a href="#0" class="color-red " title="color-red"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-purple" title="color-purple"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-malt" title="color-malt"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-green" title="color-green"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-blue" title="color-blue"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-orange" title="color-orange"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-header"> <span class="color"> Mi </span> Portafolio
+            <span class ="header-caption"> Un poco de mis <span class="color"> Trabajos</span></span></div>
+        <div id="portfolio-content">
+            <div class="container gallery-container">
+
+                <div class="tz-gallery">
+
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="images/img/man.jpg">
+                                <img src="images/img/man.jpg" alt="Park">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="images/img/portada.png">
+                                <img src="images/img/portada.png" alt="Bridge">
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <a class="lightbox" href="images/img/man.jpg">
+                                <img src="images/img/man.jpg" alt="Tunnel">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="images/img/man.jpg">
+                                <img src="images/img/man.jpg" alt="Coast">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="images/img/portada.png">
+                                <img src="images/img/portada.png" alt="Rails">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="images/img/man.jpg">
+                                <img src="images/img/man.jpg" alt="Traffic">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="images/img/portada.png">
+                                <img src="images/img/portada.png" alt="Rocks">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="images/img/man.jpg">
+                                <img src="images/img/man.jpg" alt="Benches">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="images/img/portada.png">
+                                <img src="images/img/portada.png" alt="Sky">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--copyright-section You Can Remove After Downloading-->
+            <div class="footer">
+                <div class="footer-text">
+                    <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> Willy Wonkas
+                </div>
+            </div>
+            <!--copyright-section-->
+        </div>
+    </div>
+        <!--portfolio end-->
+        <!-- fin galeria -->
     <!--all the divisions-->
     <script src="js/jquery.min.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="js/index.js"></script>
     <!--particles script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>
 <script>
     particlesJS("particles", {"particles":{"number":{"value":60,"density":{"enable":true,"value_area":800}},"color":{"value":"#fff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":7,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":500,"color":"#ffffff","opacity":0.4,"width":2},"move":{"enable":true,"speed":3,"direction":"bottom","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":0.5}},"bubble":{"distance":400,"size":4,"duration":0.3,"opacity":1,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
 </script>
